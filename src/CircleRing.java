@@ -18,31 +18,27 @@ public class CircleRing {
 		// 3. Put the robot's pen down
 		rob.penDown();
 		// 4. Set the robot’s speed to 10
-		rob.setSpeed(10);
+		rob.setSpeed(500);
 		// 5. Do everything below here 360 times (use i as the counter)
+
 		for (int i = 0; i < 360; i++) {
 
+			// 6. Move the robot 3 pixels
+			rob.move(3);
+			// 7. Turn the robot 1 degree
+			rob.turn(1);
+			// 8. If the counter i is divisible by 20 (hint: use mod operator %)..
 			if (i % 20 == 0) {
+
+				// 9. do steps 10 and 11 exactly 360 times (use j as the counter)
 				for (int j = 0; j < 360; j++) {
+
+					// 10. Move the robot 1 pixel
 					rob.move(1);
-					rob.turn(1);
-				}
-				{
-					rob.move(3);
+					// 11. Turn the robot 1 degree
 					rob.turn(1);
 				}
 			}
 		}
-		// 6. Move the robot 3 pixels
-
-		// 7. Turn the robot 1 degree
-
-		// 8. If the counter i is divisible by 20 (hint: use mod operator %)..
-
-		// 9. do steps 10 and 11 exactly 360 times (use j as the counter)
-
-		// 10. Move the robot 1 pixel
-
-		// 11. Turn the robot 1 degree
 	}
 }
